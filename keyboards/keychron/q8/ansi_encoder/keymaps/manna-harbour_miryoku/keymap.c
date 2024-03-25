@@ -18,5 +18,7 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [8] = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
     [9] = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
     [10] = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    [11] = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU)},
+    [12] = {ENCODER_CCW_CW(KC_VOLD, KC_VOLU)}
 };
 #endif // ENCODER_MAP_ENABLE
