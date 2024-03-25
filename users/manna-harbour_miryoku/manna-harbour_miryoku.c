@@ -7,15 +7,37 @@
 
 #include "manna-harbour_miryoku.h"
 
+// play, next, prev
+void dance_media(tap_dance_state_t *state, void *user_data) {
+    if (state->count == 1) {
+        tap_code(KC_MPLY);
+    } else if (state->count == 2) {
+        tap_code (KC_MNXT);
+    } else if (state->count == 3) {
+        tap_code(KC_MPRV);
+    } else {
+        reset_tap_dance(state);
+    }
+}
 
 // Additional Features double tap guard
 
 enum {
     U_TD_BOOT,
+  DANCE_MEDIA,
 #define MIRYOKU_X(LAYER, STRING) U_TD_U_##LAYER,
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
 };
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case (TD(DANCE_MEDIA)):
+            return TAPPING_TERM + 200;
+        default:
+            return TAPPING_TERM;
+    }
+}
 
 void u_td_fn_boot(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
@@ -34,6 +56,7 @@ MIRYOKU_LAYER_LIST
 
 tap_dance_action_t tap_dance_actions[] = {
     [U_TD_BOOT] = ACTION_TAP_DANCE_FN(u_td_fn_boot),
+    [DANCE_MEDIA] = ACTION_TAP_DANCE_FN(dance_media),
 #define MIRYOKU_X(LAYER, STRING) [U_TD_U_##LAYER] = ACTION_TAP_DANCE_FN(u_td_fn_U_##LAYER),
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
