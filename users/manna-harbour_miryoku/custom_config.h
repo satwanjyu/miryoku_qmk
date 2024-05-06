@@ -43,7 +43,7 @@ KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,                     
 KC_TAB,  K00,     K01,     K02,     K03,     K04,                                         K05,     K06,     K07,     K08,     K09,      KC_LBRC,  KC_RBRC,  KC_BSLS,          KC_DEL,   \
 KC_CAPS, K10,     K11,     K12,     K13,     K14,                                         K15,     K16,     K17,     K18,     K19,      KC_QUOT,  KC_ENT,                     KC_HOME,  \
 KC_LSFT, K20,     K21,     K22,     K23,     K24,                       K24,              K25,     K26,     K27,     K28,     K29,                KC_RSFT,  KC_UP,                      \
-KC_LCTL, KC_LALT,          KC_LGUI, KC_SPC,           MO(U_QWERTY_FN1),   MO(U_QWERTY_FN1),   KC_SPC,           KC_RGUI,                    KC_LEFT,  KC_DOWN,  KC_RGHT                     \
+KC_LCTL, KC_LALT,          KC_LGUI, KC_SPC,           MO(U_QWERTY_FN1),   MO(U_QWERTY_FN3),   KC_SPC,           KC_RGUI,                    KC_LEFT,  KC_DOWN,  KC_RGHT                     \
 )
 
 #define MIRYOKU_LAYERMAPPING_QWERTY_FN1( \
