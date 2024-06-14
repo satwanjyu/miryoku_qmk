@@ -81,6 +81,10 @@ jobs:
       custom_config: ${{ steps.process-inputs.outputs.custom_config }}
       merge: ${{ steps.process-inputs.outputs.merge }}
     steps:
+      - name: set rename limit
+        id: set-limit
+        run: |
+          git config --local merge.renamelimit 99999
       - name: Process inputs
         id: process-inputs
         run: |
