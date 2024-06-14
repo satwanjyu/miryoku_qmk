@@ -6,18 +6,12 @@
 #pragma once
 
 #if defined KEYBOARD_bastardkb_charybdis_3x5_v2_splinky_3
-#define MIRYOKU_LAYERMAPPING_TAP( \
-K00,     K01,   K02,   K03,   K04,          K05,   K06,   K07,   K08,   K09, \
-K10,     K11,   K12,   K13,   K14,          K15,   K16,   K17,   K18,   K19, \
-K20,     K21,   K22,   K23,   K24,          K25,   K26,   K27,   K28,   K29, \
-N30,     N31,   K32,   K33,   K34,          K35,   K36,   K37,   N38,   N39 \
-) \
-LAYOUT_charybdis_3x5( \
-KC_TAB,  K00,   K01,    K02,    K03,          K06,     K07,     KC_UP,   K09,     KC_BSPC, \
-KC_LSFT, K10,   K11,    K12,    K13,          K16,     KC_LEFT, KC_DOWN, KC_RGHT, KC_ENT,  \
-KC_G,    K20,   K21,    K22,    K23,          K26,     K27,     K28,     K29,     DF(U_BASE),  \
-            KC_LCTL, KC_SPC, KC_ESC,          KC_LGUI, KC_RALT \
-)
+#define MIRYOKU_LAYER_TAP \
+KC_TAB,            KC_Q,              KC_W,              KC_E,              KC_R,              KC_U,              KC_I,              KC_UP,             KC_P,              KC_BSPC,           \
+KC_LSFT,           KC_A,              KC_S,              KC_D,              KC_F,              KC_J,              KC_LEFT,           KC_DOWN,           KC_RGHT,           KC_ENT,            \
+KC_G,              KC_Z,              KC_X,              KC_C,              KC_V,              KC_M,              KC_COMM,           KC_DOT,            KC_SLSH,           DF(U_BASE),        \
+U_NP,              U_NP,              KC_LCTL,          KC_SPC,            KC_ESC,            KC_LGUI,           KC_LALT,           KC_DEL,            U_NP,              U_NP
+
 #define MIRYOKU_LAYER_BUTTON \
 U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,             \
 KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           U_NU,              U_NU,              KC_LSFT,           KC_LCTL,           KC_LALT,           KC_LGUI,           \
