@@ -13,9 +13,14 @@ K20,     K21,   K22,   K23,   K24,          K25,   K26,   K27,   K28,   K29, \
 N30,     N31,   K32,   K33,   K34,          K35,   K36,   K37,   N38,   N39 \
 ) \
 LAYOUT_charybdis_3x5( \
-KC_ESC,  K00,   K01,   K02,    K03,          K06,     K07,     KC_UP,   K09,     KC_BSPC, \
-KC_LSFT, K10,   K11,   K12,    K13,          K16,     KC_LEFT, KC_DOWN, KC_RGHT, KC_ENT,  \
-KC_LCTL, K20,   K21,   K22,    K23,          K26,     K27,     K28,     K29,     DF(U_BASE),  \
-                KC_G,  KC_SPC, KC_TAB,       KC_LGUI, KC_RALT \
+KC_TAB,  K00,   K01,    K02,    K03,          K06,     K07,     KC_UP,   K09,     KC_BSPC, \
+KC_LSFT, K10,   K11,    K12,    K13,          K16,     KC_LEFT, KC_DOWN, KC_RGHT, KC_ENT,  \
+KC_G,    K20,   K21,    K22,    K23,          K26,     K27,     K28,     K29,     DF(U_BASE),  \
+            KC_LCTL, KC_SPC, KC_ESC,          KC_LGUI, KC_RALT \
 )
+#define MIRYOKU_LAYER_BUTTON \
+U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,             \
+KC_LGUI,           KC_LALT,           KC_LCTL,           KC_LSFT,           U_NU,              U_NU,              KC_LSFT,           KC_LCTL,           KC_LALT,           KC_LGUI,           \
+U_UND,             U_CUT,             U_CPY,             U_PST,             U_RDO,             U_RDO,             U_PST,             U_CPY,             U_CUT,             U_UND,             \
+U_NP,              U_NP,              DRAG,              KC_BTN1,           KC_BTN2,           KC_BTN2,           KC_BTN1,           KC_BTN3,           U_NP,              U_NP
 #endif

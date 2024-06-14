@@ -15,7 +15,19 @@ enum {
 #define MIRYOKU_X(LAYER, STRING) U_TD_U_##LAYER,
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
+DRAG
 };
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  switch (keycode) {
+    case DRAG:
+      charybdis_set_pointer_dragscroll_enabled(record->event.pressed);
+      return true;
+    default:
+      return true;
+  }
+}
+
 
 void u_td_fn_boot(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
