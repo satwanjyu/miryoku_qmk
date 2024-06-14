@@ -28,6 +28,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   }
 }
 
+void pointing_device_init_user(void) {
+    set_auto_mouse_enable(true);
+}
 
 void u_td_fn_boot(tap_dance_state_t *state, void *user_data) {
   if (state->count == 2) {
@@ -75,7 +78,7 @@ const key_override_t **key_overrides = (const key_override_t *[]){
 
 #if defined (MIRYOKU_KLUDGE_THUMBCOMBOS)
 const uint16_t PROGMEM thumbcombos_base_right[] = {LT(U_SYM, KC_ENT), LT(U_NUM, KC_BSPC), COMBO_END};
-const uint16_t PROGMEM thumbcombos_base_left[] = {LT(U_NAV, KC_SPC), LT(U_MOUSE, KC_TAB), COMBO_END};
+const uint16_t PROGMEM thumbcombos_base_left[] = {LT(U_NAV, KC_SPC), KC_TAB, COMBO_END};
 const uint16_t PROGMEM thumbcombos_nav[] = {KC_ENT, KC_BSPC, COMBO_END};
 const uint16_t PROGMEM thumbcombos_mouse[] = {KC_BTN2, KC_BTN1, COMBO_END};
 const uint16_t PROGMEM thumbcombos_media[] = {KC_MSTP, KC_MPLY, COMBO_END};
